@@ -1,4 +1,4 @@
-//teoria 
+//teoria/apuntes
 //sets
 //a diferencia de un  array solo utiliza elementos unicos
 
