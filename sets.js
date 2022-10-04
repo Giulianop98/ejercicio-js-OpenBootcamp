@@ -23,6 +23,7 @@ console.log(new Date(1998,4,1,6,30))
 const fecha = new Date()
 const fecha2= new Date(1998, 4, 1, 8, 30, 20, 160)
 const fechas= fecha>fecha2
+const dia= fecha2.getDay()
 const mes= fecha2.getMonth()
 const año= fecha2.getFullYear()
 
