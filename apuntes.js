@@ -326,9 +326,9 @@ finally{
     console.log('se ejectua haya error o no')
 }
 //dara error si no se da un numero
-//gestion de registros en node js
 
 
 
+/////////////////////////////////////////////////
 
 
