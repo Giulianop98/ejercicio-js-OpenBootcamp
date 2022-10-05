@@ -300,3 +300,35 @@ console.log(gen.next().value)
 console.log(gen.next().value)
 
 //////////////
+//errores
+//utilizar throw
+const miFuncion = val => {
+    if (typeof val === 'number'){
+        return 2 * val
+    }
+    throw new Error ('el valor debe ser numerico')
+}
+
+//const doble= miFuncion('ala')
+//esto es un error
+// si falla se usa el try y catch
+
+try{
+    //el codigo puede fallar 
+    console.log('se esta ejecutando bien')
+    const doble = miFuncion(num)
+    console.log(doble)
+}catch(e){
+    //en caso de que falle
+    console.log('error')
+}
+finally{
+    console.log('se ejectua haya error o no')
+}
+//dara error si no se da un numero
+//gestion de registros en node js
+
+
+
+
+

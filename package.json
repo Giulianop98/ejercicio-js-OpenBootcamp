@@ -11,5 +11,16 @@
     "holamundo"
   ],
   "author": "Giuliano Pimenta",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Giulianop98/ejercicio-js-OpenBootcamp.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Giulianop98/ejercicio-js-OpenBootcamp/issues"
+  },
+  "homepage": "https://github.com/Giulianop98/ejercicio-js-OpenBootcamp#readme",
+  "dependencies": {
+    "winston": "^3.8.2"
+  }
 }
