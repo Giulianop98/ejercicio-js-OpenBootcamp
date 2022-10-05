@@ -298,3 +298,5 @@ const gen = generaId();
 console.log(gen.next().value)
 console.log(gen.next().value)
 console.log(gen.next().value)
+
+//////////////
