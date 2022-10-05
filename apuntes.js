@@ -158,3 +158,143 @@ console.log(fecha5)
 
   //mostrar fecha en string usando .toLocalDateString()
   console.log(fecha2.toLocaleDateString('en-US'))
+
+
+
+  ///////////////////////////////////////////////////////
+
+//funciones
+//entre los parentesis van losm parametros
+//entre las llaves la accion
+//ejemplo
+
+saludar('Giuliano')
+//el parametro puede ser cualquier objeto
+//si no pones nada sale undefined
+function saludar (nombre){
+    console.log(`Hola ${nombre}`)
+}
+//////////////////////////////////
+let nombre2= 'martin'
+console.log(nombre2)
+despedir (nombre2)
+
+function despedir(nombre){
+    nombre = 'Pepe'
+    console.log(`chau ${nombre}`)
+}
+//si modificas el parametro dentro de la funcion no afecta a la variable
+
+/////////////////////////////////////////
+//en los objetos si se modifica 
+//ejemplo
+let persona = {nombre:'Giuliano', apellido:'Pimenta'}
+saludarPersona(persona)
+console.log(persona)
+function saludarPersona(objeto){
+    objeto.nombre='Martin'
+    console.log(`Hola ${objeto.nombre} ${objeto.apellido}`)
+}
+//si modificamos dentro de la fucnion se mdofica todo
+
+//parametros opcionales
+
+function Numero (Numero=8){
+    console.log(Numero)
+}
+Numero()
+ //si le pones algun valor si se modifica 
+//si al nombrar la funcion no le pasas ningun valor siemre te va a imprimer el numero 8
+
+//Listas en una funcion
+function imprimir (...parametros){
+    console.log(parametros)
+}
+imprimir(1,2,3,4,'hola',{id:8})
+
+//sumar valores
+//se usa el reduce
+function suma (...nums){
+    return nums.reduce((a, b)=>a+b)
+}
+//con el return podemos mostrar el valor en pantalla
+
+const s= suma(1,2,3,4,5)
+
+console.log(s)
+
+///////////////////////////////////
+
+//funciones tipo flecha
+const lista = [2,4,6,8,10]
+//la idea seria multipicar sus valores
+const lista2= lista.map((valor)=>valor * 2)
+//funcion flecha anonima
+console.log(lista2)
+//funcion flecha declarada
+const doble = valor=>valor*2
+
+const lista3= lista.map(doble)
+
+console.log(lista3)
+
+//carga y sobrecarga de funciones
+function saludo(){
+    hola()
+}
+
+function hola(){
+    console.log('hola')
+}
+
+saludo()
+
+//La funcion saludo busca a la funcion hola y luego la ejecuta al declararla
+
+//la sobrecarga es cuando llamas a una fucnion dentro de la otra con el mismo nombre
+
+//funciones asincronas 
+//hace llamadas a datos externos
+
+function asinc(){
+
+}
+
+//se usan las promess
+
+const promess =new Promise ((resolve, reject)=>{
+   const i = Math.floor(Math.random()*2)
+    if(i!==0){
+        resolve()
+    }
+    else{
+        reject()
+    }
+})
+
+promess
+.then(()=>console.log('salio bien'))
+.catch(()=>cosole.log('error'))
+
+.finally(()=>console.log('se ejecuta siempre'))
+
+
+
+////////////
+//funciones generadoras
+function* generaId(){
+    let id= 0;
+    while(true){
+        id++
+        if(id===10){
+            return id
+        }
+        yield id
+    }
+}
+
+const gen = generaId();
+
+console.log(gen.next().value)
+console.log(gen.next().value)
+console.log(gen.next().value)
